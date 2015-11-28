@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/main_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/main_title_iv_person"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_btn_speak_now"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_title_iv_dynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:text="动态"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/main_title_iv_yue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:text="约伴"
+                android:textSize="25dp"
+
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/main_title_iv_senddynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:text="发动态"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_tabsconten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bar_rg"
+        android:layout_below="@id/main_title_bar">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bar_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/main_btn_tab_feed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_tab_feed"
+            />
+
+        <ImageView
+            android:id="@+id/main_btn_tab_found"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_bottom_event_selector"
+            />
+
+        <ImageView
+            android:id="@+id/main_btn_tab_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_bottom_foud_selector"
+            />
+
+        <!--<ImageView android:id="@+id/main_btn_tab_notifycation"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="click"-->
+
+        <!--android:src="@drawable/main_bottom_notifycation_selector"-->
+        <!--/>-->
+
+        <ImageView
+            android:id="@+id/main_btn_tab_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_bottom_mine_selector"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
