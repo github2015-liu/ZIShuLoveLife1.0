@@ -12,13 +12,13 @@ import com.zodiac.zishulovelife.fragment.FragmentEvent;
 import com.zodiac.zishulovelife.fragment.FragmentFeed;
 import com.zodiac.zishulovelife.fragment.FragmentFound;
 import com.zodiac.zishulovelife.fragment.FragmentMine;
-import com.zodiac.zishulovelife.fragment.FragmentNotifyCation;
+
 
 public class MainActivity extends FragmentActivity {
     private ImageView iv_main_btn_tab_feed;
     private ImageView iv_main_btn_tab_found;
     private ImageView iv_main_btn_tab_event;
-    private ImageView iv_main_btn_tab_notifycation;
+
     private ImageView iv_main_btn_tab_mine;
 
     private android.support.v4.app.FragmentManager mFragmentManager;
@@ -27,7 +27,7 @@ public class MainActivity extends FragmentActivity {
     private FragmentFeed fragmentFeed;
     private FragmentFound fragmentFound;
     private FragmentEvent fragmentEvent;
-    private FragmentNotifyCation fragmentNotifyCation;
+
     private FragmentMine fragmentMine;
 
     @Override
@@ -38,7 +38,6 @@ public class MainActivity extends FragmentActivity {
         iv_main_btn_tab_feed = (ImageView) findViewById(R.id.main_btn_tab_feed);
         iv_main_btn_tab_found = (ImageView) findViewById(R.id.main_btn_tab_found);
         iv_main_btn_tab_event = (ImageView) findViewById(R.id.main_btn_tab_event);
-//        iv_main_btn_tab_notifycation = (ImageView) findViewById(R.id.main_btn_tab_notifycation);
         iv_main_btn_tab_mine = (ImageView) findViewById(R.id.main_btn_tab_mine);
 
         mFragmentManager = getSupportFragmentManager();
@@ -56,8 +55,8 @@ public class MainActivity extends FragmentActivity {
         fragmentFeed = new FragmentFeed();
         fragmentFound = new FragmentFound();
         fragmentEvent = new FragmentEvent();
-        fragmentNotifyCation = new FragmentNotifyCation();
         fragmentMine = new FragmentMine();
+
         showFragment(fragmentFeed);
 
     }
@@ -66,7 +65,6 @@ public class MainActivity extends FragmentActivity {
         iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed_selected));
         iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found));
         iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event));
-//        iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation));
         iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine));
 
     }
@@ -88,7 +86,6 @@ public class MainActivity extends FragmentActivity {
                 iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed_selected));
                 iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found));
                 iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event));
-//                iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation));
                 iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine));
 
                 break;
@@ -98,7 +95,6 @@ public class MainActivity extends FragmentActivity {
                 iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed));
                 iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found_selected));
                 iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event));
-//                iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation));
                 iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine));
                 break;
 
@@ -107,26 +103,17 @@ public class MainActivity extends FragmentActivity {
                 iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed));
                 iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found));
                 iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event_selected));
-//                iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation));
                 iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine));
                 break;
 
 
-//            case R.id.main_btn_tab_notifycation:
-//                showFragment(fragmentNotifyCation);
-//                iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed));
-//                iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found));
-//                iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event));
-//                iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation_selected));
-//                iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine));
-//                break;
+
 
             case R.id.main_btn_tab_mine:
                 showFragment(fragmentMine);
                 iv_main_btn_tab_feed.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_feed));
                 iv_main_btn_tab_found.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_found));
                 iv_main_btn_tab_event.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_event));
-//                iv_main_btn_tab_notifycation.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_notifycation));
                 iv_main_btn_tab_mine.setImageDrawable(getResources().getDrawable(R.drawable.btn_tab_mine_selected));
                 break;
 
@@ -135,7 +122,6 @@ public class MainActivity extends FragmentActivity {
 
     private void showFragment(Fragment fragment) {
         if (fragment == null) {
-            /*Log.e("demo", "fragment is null");*/
             return;
         }
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
